@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <link rel="stylesheet" href="Sample.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.css" rel="stylesheet" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <title></title>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+        <img class="sidebar-logo" src="MDULOGO.png" alt="MDULOGO">
+        <span class="logo_name">Medical and Dental Unit</span>
+    </div>
+    <ul class="nav-links">
+
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Appointment</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Appointment</a></li>
+          <li><a href="#">Schedule for Medical</a></li>
+          <li><a href="#">Schedule for Dental</a></li>
+        </ul>
+      </li>
+      
+      
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+        <!--<img src="image/profile.jpg" alt="profileImg">-->
+      </div>
+      <div class="name-job">
+        <div class="profile_name"></div>
+        <div class="job"></div>
+      </div>
+      <i class='bx bx-log-out' onclick="redirectToLogin()"></i>
+    </div>
+  </li>
+</ul>
+  </div>
+
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+    </div>
+
+
+    <h2>Appointment Booking Form for Medical</h2>
+
+    <form action="#" method="POST" id="appointmentForm">
+        <div class="form-group">
+            <label for="id_number">ID Number:</label>
+            <input type="text" id="id_number" name="id_number" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="middle_initial">Middle Initial:</label>
+            <input type="text" id="middle_initial" name="middle_initial">
+        </div>
+    
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required min="2024-01-01" max="2024-12-31">
+        </div>
+    
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <div id="timeButtons">
+            <button type="button" class="timeButton" value="2:00 PM">2:00 PM</button>
+            <button type="button" class="timeButton" value="2:30 PM">2:30 PM</button>
+            <button type="button" class="timeButton" value="3:00 PM">3:00 PM</button>
+            <button type="button" class="timeButton" value="3:30 PM">3:30 PM</button>
+            <button type="button" class="timeButton" value="4:00 PM">4:00 PM</button>
+            <div class="form-group">
+              <input type="submit" value="Submit">
+          </div>
+      </form>
+
+
+
+  <script src="Sample.js"></script>
+</body>
+</html>
