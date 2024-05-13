@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
 }
 
 // Close the database connection
-$db->close();
+$db->close() or die();
 
 
 ?>

@@ -1,6 +1,7 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,12 +9,13 @@
 }
 
 .sidebar-logo {
-    height: 60px;
-    width: 60px;
-    margin-top: 20px;
-    margin-left: 10px;
+  height: 60px;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
-.sidebar{
+
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,17 +25,19 @@
   z-index: 100;
   transition: all 0.5s ease;
 }
-.sidebar.close{
+
+.sidebar.close {
   width: 75px;
 }
-.sidebar .logo-details{
+
+.sidebar .logo-details {
   height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.sidebar .logo-details .logo_name{
+.sidebar .logo-details .logo_name {
   font-size: 15px;
   color: #fff;
   font-weight: 600;
@@ -43,39 +47,48 @@
   margin-top: 10px;
   margin-left: 3px;
 }
-.sidebar.close .logo-details .logo_name{
+
+.sidebar.close .logo-details .logo_name {
   transition-delay: 0s;
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links{
+
+.sidebar .nav-links {
   height: 100%;
   padding: 30px 0 150px 0;
   overflow: auto;
 }
-.sidebar.close .nav-links{
+
+.sidebar.close .nav-links {
   overflow: visible;
 }
-.sidebar .nav-links::-webkit-scrollbar{
+
+.sidebar .nav-links::-webkit-scrollbar {
   display: none;
 }
-.sidebar .nav-links li{
+
+.sidebar .nav-links li {
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
 }
-.sidebar .nav-links li:hover{
+
+.sidebar .nav-links li:hover {
   background: #1e3d2c;
 }
-.sidebar .nav-links li .iocn-link{
+
+.sidebar .nav-links li .iocn-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.sidebar.close .nav-links li .iocn-link{
+
+.sidebar.close .nav-links li .iocn-link {
   display: block
 }
-.sidebar .nav-links li i{
+
+.sidebar .nav-links li i {
   height: 50px;
   min-width: 78px;
   text-align: center;
@@ -85,37 +98,45 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.sidebar .nav-links li.showMenu i.arrow{
+
+.sidebar .nav-links li.showMenu i.arrow {
   transform: rotate(-180deg);
 }
-.sidebar.close .nav-links i.arrow{
+
+.sidebar.close .nav-links i.arrow {
   display: none;
 }
-.sidebar .nav-links li a{
+
+.sidebar .nav-links li a {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-.sidebar .nav-links li a .link_name{
+
+.sidebar .nav-links li a .link_name {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
   transition: all 0.4s ease;
 }
-.sidebar.close .nav-links li a .link_name{
+
+.sidebar.close .nav-links li a .link_name {
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links li .sub-menu{
+
+.sidebar .nav-links li .sub-menu {
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
   background: #085d32;
   display: none;
 }
-.sidebar .nav-links li.showMenu .sub-menu{
+
+.sidebar .nav-links li.showMenu .sub-menu {
   display: block;
 }
-.sidebar .nav-links li .sub-menu a{
+
+.sidebar .nav-links li .sub-menu a {
   color: #fff;
   font-size: 15px;
   padding: 5px 0;
@@ -123,10 +144,12 @@
   opacity: 0.6;
   transition: all 0.3s ease;
 }
-.sidebar .nav-links li .sub-menu a:hover{
+
+.sidebar .nav-links li .sub-menu a:hover {
   opacity: 1;
 }
-.sidebar.close .nav-links li .sub-menu{
+
+.sidebar.close .nav-links li .sub-menu {
   position: absolute;
   left: 100%;
   top: -10px;
@@ -138,28 +161,33 @@
   pointer-events: none;
   transition: 0s;
 }
-.sidebar.close .nav-links li:hover .sub-menu{
+
+.sidebar.close .nav-links li:hover .sub-menu {
   top: 0;
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
 }
-.sidebar .nav-links li .sub-menu .link_name{
+
+.sidebar .nav-links li .sub-menu .link_name {
   display: none;
 }
-.sidebar.close .nav-links li .sub-menu .link_name{
+
+.sidebar.close .nav-links li .sub-menu .link_name {
   font-size: 18px;
   opacity: 1;
   display: block;
 }
-.sidebar .nav-links li .sub-menu.blank{
+
+.sidebar .nav-links li .sub-menu.blank {
   opacity: 1;
   pointer-events: auto;
   padding: 3px 20px 6px 16px;
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links li:hover .sub-menu.blank{
+
+.sidebar .nav-links li:hover .sub-menu.blank {
   top: 50%;
   transform: translateY(-50%);
 }
@@ -171,7 +199,7 @@
   height: 400px;
 }
 
-.sidebar .profile-details{
+.sidebar .profile-details {
   position: fixed;
   bottom: 0;
   width: 260px;
@@ -182,17 +210,21 @@
   padding: 12px 0;
   transition: all 0.5s ease;
 }
-.sidebar.close .profile-details{
+
+.sidebar.close .profile-details {
   background: none;
 }
-.sidebar.close .profile-details{
+
+.sidebar.close .profile-details {
   width: 78px;
 }
-.sidebar .profile-details .profile-content{
+
+.sidebar .profile-details .profile-content {
   display: flex;
   align-items: center;
 }
-.sidebar .profile-details img{
+
+.sidebar .profile-details img {
   height: 52px;
   width: 52px;
   object-fit: cover;
@@ -201,50 +233,60 @@
   background: #085d32;
   transition: all 0.5s ease;
 }
-.sidebar.close .profile-details img{
+
+.sidebar.close .profile-details img {
   padding: 10px;
 }
+
 .sidebar .profile-details .profile_name,
-.sidebar .profile-details .job{
+.sidebar .profile-details .job {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
 }
+
 .sidebar.close .profile-details i,
 .sidebar.close .profile-details .profile_name,
-.sidebar.close .profile-details .job{
+.sidebar.close .profile-details .job {
   display: none;
 }
-.sidebar .profile-details .job{
+
+.sidebar .profile-details .job {
   font-size: 12px;
 }
-.home-section{
+
+.home-section {
   position: relative;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
 }
-.sidebar.close ~ .home-section{
+
+.sidebar.close~.home-section {
   left: 78px;
   width: calc(100% - 78px);
 }
-.home-section .home-content{
+
+.home-section .home-content {
   height: 60px;
   display: flex;
   align-items: center;
 }
+
 .home-section .home-content .bx-menu,
-.home-section .home-content .text{
+.home-section .home-content .text {
   color: #085d32;
   font-size: 35px;
 }
-.home-section .home-content .bx-menu{
+
+.home-section .home-content .bx-menu {
   margin: 0 15px;
   cursor: pointer;
 }
-.home-section .home-content .text{
+
+.home-section .home-content .text {
   font-size: 26px;
   font-weight: 600;
 }
@@ -256,286 +298,331 @@
 
 
 
-#registration{
-    padding-left: 15%;
-    padding-right: 15%;
+#registration {
+  padding-left: 15%;
+  padding-right: 15%;
 }
+
 form {
-    background-color: rgba(245, 245, 245, 0);
+  background-color: rgba(245, 245, 245, 0);
 }
+
 h3 {
-    text-align: center;
-    padding-bottom: 2.5%;
+  text-align: center;
+  padding-bottom: 2.5%;
 }
+
 label {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
+
 input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
-.buttonReg{
-    background-color: #085d32;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    border-radius: 4px;
+
+.buttonReg {
+  background-color: #085d32;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  border-radius: 4px;
 }
-.buttonReg:hover{
-    background-color: #1e3d2c;
+
+.buttonReg:hover {
+  background-color: #1e3d2c;
 }
+
 /*-------------------------------------------------*/
 .tualogo {
-    height: 90px;
-    width: 90px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  height: 90px;
+  width: 90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .tuatitle {
-    margin-top: 1%;
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
+  margin-top: 1%;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .mdutitle {
-    text-align: center;
-    margin-bottom: 3%;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .healthrectitle {
-    text-align: center;
-    margin-bottom: 1%;
-    background-color: gray;
-    color:white;
+  text-align: center;
+  margin-bottom: 1%;
+  background-color: gray;
+  color: white;
 }
+
 /*-------------------------------------------------*/
 div.solid {
-    padding: 2.5%;
-    border-radius: 8px;
-    border-style: solid;
+  padding: 2.5%;
+  border-radius: 8px;
+  border-style: solid;
 }
 
 .studentno-group {
-    width: 15%;
-    display: inline-block;
+  width: 15%;
+  display: inline-block;
 }
 
 .course-group {
-    width: 65%;
-    display: inline-block;
-    margin-left: 42%;
-    margin-right: -34%;
+  width: 65%;
+  display: inline-block;
+  margin-left: 42%;
+  margin-right: -34%;
 }
 
 .yrlvl-group {
-    width: 8%;
-    display: inline-block;
+  width: 8%;
+  display: inline-block;
 }
 
 .lname-group {
-    width: 25%;
-    display: inline-block;
+  width: 25%;
+  display: inline-block;
 }
 
 .fname-group {
-    width: 25%;
-    display: inline-block;
+  width: 25%;
+  display: inline-block;
 }
 
 .mname-group {
-    width: 10%;
-    display: inline-block;
+  width: 10%;
+  display: inline-block;
 }
 
 .age-group {
-    width: 10%;
-    display: inline-block;
-    margin-left: 3%;
+  width: 10%;
+  display: inline-block;
+  margin-left: 3%;
 }
 
 .dateofbirth-group {
-    width: 10%;
-    display: inline-block;
-    margin-left: 3%;
+  width: 10%;
+  display: inline-block;
+  margin-left: 3%;
 }
 
 .gender-group {
-    width: 10%;
-    display: inline-block;
-    margin-left: 1.5%;
+  width: 10%;
+  display: inline-block;
+  margin-left: 1.5%;
 }
 
 .address-group {
-    width: 50%;
-    display: inline-block;
+  width: 50%;
+  display: inline-block;
 }
 
 .contactpatient {
-    width: 24%;
-    display: inline-block;
+  width: 24%;
+  display: inline-block;
 }
 
 .nationality-group {
-    width: 24.9%;
-    display: inline-block;
+  width: 24.9%;
+  display: inline-block;
 }
 
 .nameofparentguardian-group {
-    width: 60%;
-    display: inline-block;
+  width: 60%;
+  display: inline-block;
 }
 
 .contactparentguardian-group {
-    width: 24.5%;
-    display: inline-block;
-    margin-left: 14.5%;
+  width: 24.5%;
+  display: inline-block;
+  margin-left: 14.5%;
 }
+
 /*-------------------------------------------------*/
 .healthhistorytitle {
-    margin-top: 3%;
-    text-align: center;
-    background-color: gray;
-    color: white;
+  margin-top: 3%;
+  text-align: center;
+  background-color: gray;
+  color: white;
 }
 
 .immunizationtitle {
-    display: block;
+  display: block;
 }
 
 .row {
-    padding: 3%;
+  padding: 3%;
 }
+
 /*-------------------------------------------------*/
 .immunization-container {
-    display: flex;
-    align-items: center; /* Center checkbox and label vertically */
+  display: flex;
+  align-items: center;
+  /* Center checkbox and label vertically */
 }
 
 .immunization-container input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
-.immunization-container input[type="checkbox"] + label {
-    cursor: pointer;
-    padding-left: 25px;
-    position: relative;
+.immunization-container input[type="checkbox"]+label {
+  cursor: pointer;
+  padding-left: 25px;
+  position: relative;
 }
 
-.immunization-container input[type="checkbox"] + label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #333;
-    position: absolute;
-    left: 0;
-    top: 50%; /* Adjust vertically to center */
-    transform: translateY(-50%);
+.immunization-container input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  /* Adjust vertically to center */
+  transform: translateY(-50%);
 }
 
-.immunization-container input[type="checkbox"]:checked + label::after {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #333;
-    position: absolute;
-    left: 4px;
-    top: 50%; /* Adjust vertically to center */
-    transform: translateY(-50%);
+.immunization-container input[type="checkbox"]:checked+label::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  /* Adjust vertically to center */
+  transform: translateY(-50%);
 }
+
 /*-------------------------------------------------*/
 .radio-buttons input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 .radio-buttons label {
-    cursor: pointer;
-    display: inline-flex; /* Display radio button and label in one line */
-    align-items: center; /* Align items vertically */
+  cursor: pointer;
+  display: inline-flex;
+  /* Display radio button and label in one line */
+  align-items: center;
+  /* Align items vertically */
 }
 
 .radio-buttons label::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #333; /* Add border to create circle */
-    border-radius: 50%; /* Ensure the border creates a circle */
-    margin-right: 5px; /* Adjust spacing between radio button and label */
-    margin-left: 15px; /* Move the radio button a bit to the right */
-    vertical-align: middle;
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  /* Add border to create circle */
+  border-radius: 50%;
+  /* Ensure the border creates a circle */
+  margin-right: 5px;
+  /* Adjust spacing between radio button and label */
+  margin-left: 15px;
+  /* Move the radio button a bit to the right */
+  vertical-align: middle;
 }
 
-.radio-buttons input[type="radio"]:checked + label::before {
-    background-color: #333;
-    border-radius: 50%;
+.radio-buttons input[type="radio"]:checked+label::before {
+  background-color: #333;
+  border-radius: 50%;
 }
+
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
 .othersspecify-group {
-    width: 100%;
+  width: 100%;
 }
 
 .othersspecify {
-    font-style: italic;
-    font-size: 15px;
+  font-style: italic;
+  font-size: 15px;
 }
+
 /*-------------------------------------------------*/
 .allergies-group {
-    width: 100%;
+  width: 100%;
 }
+
 /*-------------------------------------------------*/
 .incaseofem-group {
-    width: 100%;
+  width: 100%;
 }
+
 /*-------------------------------------------------*/
 .physicalexam {
-    text-align: center;
-    background-color: gray;
-    color: white;
+  text-align: center;
+  background-color: gray;
+  color: white;
 }
+
 .physicalexamtable {
-    padding: 2%;
+  padding: 2%;
 }
+
 /*-------------------------------------------------*/
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
 }
-th:first-child, td:first-child {
-    width: 120px;
+
+th:first-child,
+td:first-child {
+  width: 120px;
 }
+
 th {
-    background-color: gray;
-    font-weight: bold;
+  background-color: gray;
+  font-weight: bold;
 }
+
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
+
 .bold-right {
-    text-align: right;
-    font-weight: bold;
+  text-align: right;
+  font-weight: bold;
 }
+
 @media (max-width: 420px) {
-  .sidebar.close .nav-links li .sub-menu{
+  .sidebar.close .nav-links li .sub-menu {
     display: none;
   }
+}
+
+input[type="text"] {
+  /*
+  border: none;
+  outline: none;
+  */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }

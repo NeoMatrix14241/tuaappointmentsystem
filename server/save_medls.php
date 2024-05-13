@@ -19,7 +19,7 @@ if (isset($_POST['save_logsheet'])) {
         $selectStmt->execute();
         $selectStmt->bind_result($currentQuantity);
         $selectStmt->fetch();
-        $selectStmt->close();
+        $selectStmt->close() or die();
 
         // Check if there is enough stock before inserting
         if ($currentQuantity >= $log_quantity) {
@@ -27,7 +27,7 @@ if (isset($_POST['save_logsheet'])) {
             $stmt = $db->prepare("INSERT INTO medical_logsheet (time, college_dept, name, chief_complaint, given_meds, quantity, nurse_on_duty) VALUES (?, ?, ?, ?, ?, ?, ?)");
             $stmt->bind_param("sssssis", $log_time, $log_collegeDept, $log_name, $log_chiefComplain, $log_medicineGiven, $log_quantity, $log_nurseOnDuty);
             $stmt->execute();
-            $stmt->close();
+            $stmt->close() or die();
 
             // Update medicine_records
             $updateSql = "UPDATE medicine_records SET item_quantity = (item_quantity - $log_quantity) WHERE item_name = ?";
@@ -35,7 +35,7 @@ if (isset($_POST['save_logsheet'])) {
             if ($updateStmt) {
                 $updateStmt->bind_param("s", $log_medicineGiven);
                 $updateStmt->execute();
-                $updateStmt->close();
+                $updateStmt->close() or die();
             } else {
                 echo "Error preparing update statement";
             }

@@ -12,17 +12,6 @@
     sidebar.classList.toggle("close");
   });
 
-
-
-
-
-
-
-
-
-
-
-
   document.addEventListener("DOMContentLoaded", function () {
     const timeButtons = document.querySelectorAll('.timeButton');
     const appointmentForm = document.getElementById('appointmentForm');

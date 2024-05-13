@@ -1,14 +1,14 @@
 let arrow = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", (e)=>{
- let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
- arrowParent.classList.toggle("showMenu");
+  arrow[i].addEventListener("click", (e) => {
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
   });
 }
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
 console.log(sidebarBtn);
-sidebarBtn.addEventListener("click", ()=>{
+sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
 
@@ -23,12 +23,12 @@ function changePassword() {
     message.textContent = "Please enter your old password.";
     return;
   }
-  
+
   if (newPassword.trim().length < 6) {
     message.textContent = "New password must be at least 6 characters long.";
     return;
   }
-  
+
   if (newPassword !== confirmNewPassword) {
     message.textContent = "New passwords do not match.";
     return;
@@ -41,7 +41,6 @@ function changePassword() {
   // Display success message
   message.textContent = "Password changed successfully!";
 }
-
 
 function redirectToLogin() {
   window.location.href = 'index.html';
