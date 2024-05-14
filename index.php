@@ -1,5 +1,6 @@
 <?php
-    include "server/server.php";
+    require_once "server/server.php";
+    require_once "server/auth_check.php";
 ?>
 
 <!DOCTYPE html>
